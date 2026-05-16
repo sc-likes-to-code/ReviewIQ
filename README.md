@@ -42,6 +42,7 @@ The application supports real-time inference through an interactive Streamlit we
 - Training Device: NVIDIA RTX 4060 Laptop GPU
 - Mixed Precision Training Enabled
 - Multi-label classification using sigmoid activation
+- The trained model weights are excluded from this repository due to size limitations.
 
 The model was trained on 34K+ real-world Amazon product reviews and generalized for broader sentiment analysis tasks.
 
