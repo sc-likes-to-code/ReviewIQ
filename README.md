@@ -77,19 +77,24 @@ Key observations:
 
 ## Main Interface
 
-![Main UI Screenshot](images/main_ui.png)
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/92f4e6c8-c7c0-4726-95eb-2773659804e1" />
+
 
 ---
 
 ## Positive Review Prediction
 
-![Positive Prediction Screenshot](images/positive_prediction.png)
+<img width="1919" height="1079" alt="Screenshot 2026-05-17 013253" src="https://github.com/user-attachments/assets/668b90e2-2a3b-4f9a-8c25-45483a230728" />
+<img width="1919" height="1079" alt="Screenshot 2026-05-17 013259" src="https://github.com/user-attachments/assets/77348a42-d782-43ab-af1d-8e5302018911" />
+
 
 ---
 
 ## Negative Review Prediction
 
-![Negative Prediction Screenshot](images/negative_prediction.png)
+<img width="1919" height="1079" alt="Screenshot 2026-05-17 013323" src="https://github.com/user-attachments/assets/27fc14d5-2d24-44cd-9194-25d5c903b6ce" />
+<img width="1919" height="1079" alt="Screenshot 2026-05-17 013328" src="https://github.com/user-attachments/assets/4ee86b2e-36ae-4654-b6db-b6d84af6bff0" />
+
 
 ---
 
