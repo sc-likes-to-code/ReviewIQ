@@ -192,6 +192,10 @@ You can train the model locally using:
 python train.py
 ```
 
+# 📦 Dataset
+
+Dataset not included due to GitHub file size limitations.
+
 ---
 
 # 📌 Future Improvements
