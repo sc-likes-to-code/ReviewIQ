@@ -73,6 +73,12 @@ Key observations:
 
 ---
 
+## 🚀 Live Demo
+
+[ReviewIQ Live App](https://sc-review-iq.streamlit.app/)
+
+---
+
 # 🖥️ Application Screenshots
 
 ## Main Interface
@@ -120,8 +126,7 @@ ReviewIQ/
 ├── app.py
 ├── requirements.txt
 ├── README.md
-├── .gitignore
-└── data.csv
+└── .gitignore
 ```
 
 ---
@@ -194,6 +199,12 @@ python train.py
 # 📦 Dataset
 
 Dataset not included due to GitHub file size limitations.
+
+The model was trained on 34K+ Amazon product review samples containing:
+- review text
+- review titles
+- recommendation labels
+- sentiment information
 
 ---
 
