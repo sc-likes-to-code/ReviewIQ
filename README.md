@@ -73,6 +73,12 @@ Key observations:
 
 ---
 
+## 🚀 Live Demo
+
+[ReviewIQ Live App](https://sc-review-iq.streamlit.app/)
+
+---
+
 # 🖥️ Application Screenshots
 
 ## Main Interface
