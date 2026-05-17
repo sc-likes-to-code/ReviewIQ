@@ -28,8 +28,6 @@ from torch.utils.data import Dataset, DataLoader
 # Load dataset
 
 df1 = pd.read_csv('data.csv', low_memory=False)
-print(df1.head())
-print(df1.info())
 
 # Handle missing values
 

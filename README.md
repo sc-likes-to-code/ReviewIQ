@@ -26,7 +26,6 @@ The application supports real-time inference through an interactive Streamlit we
 - Multi-label sentiment classification
 - Real-time review prediction
 - Confidence probability visualization
-- GPU acceleration with CUDA
 - Interactive Streamlit web application
 - Saved model inference pipeline
 - Clean and professional UI

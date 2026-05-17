@@ -126,7 +126,7 @@ def display_predictions(results):
 
 def main():
 
-    print('Amazon Review Sentiment Predictor Ready')
+    print('ReviewIQ Sentiment Predictor Ready')
     print("Type 'exit' to stop the program.\n")
 
     while True:

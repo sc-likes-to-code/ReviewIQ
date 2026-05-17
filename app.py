@@ -232,7 +232,7 @@ st.sidebar.markdown(
 
     - Real-time sentiment analysis
     - Transformer-based BERT inference
-    - GPU acceleration with CUDA
+    - Optimized Transformer inference
     - Confidence probability visualization
     - Multi-label sentiment classification
     - AI-powered review intelligence
