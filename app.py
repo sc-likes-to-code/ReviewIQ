@@ -35,7 +35,7 @@ DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 @st.cache_resource
 def load_model():
 
-    model_path = './saved_model'
+    model_path = 'sc-likes-to-code/reviewiq-bert-model'
 
     tokenizer = AutoTokenizer.from_pretrained(model_path)
 

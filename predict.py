@@ -23,7 +23,7 @@ print(f'Using device: {DEVICE}')
 
 # Saved model path
 
-MODEL_PATH = './saved_model'
+MODEL_PATH = 'sc-likes-to-code/reviewiq-bert-model'
 
 # Load tokenizer
 
