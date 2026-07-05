@@ -2,6 +2,9 @@ import streamlit as st
 import torch
 import re
 import pandas as pd
+import csv
+import io
+from text_sources import read_texts_from_csv
 
 from transformers import (
     AutoTokenizer,
@@ -114,6 +117,14 @@ def get_final_sentiment(results):
 
     return final_sentiment
 
+
+def render_batch_results_csv(rows):
+    buffer = io.StringIO()
+    writer = csv.DictWriter(buffer, fieldnames=["review", "final_sentiment", *LABEL_COLUMNS])
+    writer.writeheader()
+    writer.writerows(rows)
+    return buffer.getvalue()
+
 # Load model resources
 
 with st.spinner('Loading trained BERT model...'):
@@ -148,6 +159,11 @@ review_text = st.text_area(
     'Enter Review or Opinion Text',
     placeholder='Type any review, opinion, or feedback here...',
     height=180
+)
+
+uploaded_csv = st.file_uploader(
+    'Upload CSV with Tweet Text, review, text, or comment data',
+    type=['csv']
 )
 
 # Predict button
@@ -220,6 +236,51 @@ if predict_button:
             results_df,
             use_container_width=True,
             hide_index=True
+        )
+
+if uploaded_csv is not None:
+
+    st.subheader('Batch CSV Analysis')
+
+    try:
+
+        source_column, reviews = read_texts_from_csv(uploaded_csv.getvalue())
+
+    except ValueError as error:
+
+        st.error(str(error))
+
+    else:
+
+        batch_rows = []
+
+        with st.spinner('Analyzing CSV rows...'):
+
+            for review in reviews:
+
+                results = predict_sentiment(
+                    review,
+                    tokenizer,
+                    model
+                )
+
+                batch_rows.append({
+                    'review': review,
+                    'final_sentiment': get_final_sentiment(results),
+                    **results
+                })
+
+        st.caption(f'Analyzed {len(batch_rows)} rows from the {source_column} column.')
+        st.dataframe(
+            batch_rows,
+            use_container_width=True,
+            hide_index=True
+        )
+        st.download_button(
+            'Download CSV Results',
+            data=render_batch_results_csv(batch_rows),
+            file_name='reviewiq_results.csv',
+            mime='text/csv'
         )
 
 # Sidebar
